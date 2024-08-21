@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="css/style.min.css" rel="stylesheet" media="screen" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Plus Max</title>
+    <!-- Owl Carousel CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+</head>
+
+<body>
+
+
+    <div class="position-relative">
+        <nav class=" navbar navbartop navbar-expand-lg bg-white animate__animated animate__fadeInDown">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse1 navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav1 center-text">
+
+                        <li class="nav-item location-item">
+                            <a class="nav-link" href="#">
+                                <div class="location-name">
+                                    <span class="plane_icon">
+                                        <img src="img/plane.png" alt="Plane Icon" />
+                                    </span>
+                                    <span class="location-name-text">Kuala Lumpur Inter...</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item search-item">
+                            <a class="nav-link nav-text" href="#" id="searchButton">
+                                <i class="fa-solid fa-magnifying-glass"></i> Search
+                            </a>
+                        </li>
+                       
+                        <li class="nav-item position-relative d-none" id="searchInputContainer">
+                            <div class="d-flex justify-content-center align-items-center">
+                            <a class="nav-link" href="#">
+                                <div class="location-arrow">
+                                    <img src="img/plane.png" alt="Plane Icon" />
+                                </div>
+                            </a>
+                            <div class="input-group globalsearch">
+                                
+                                <input type="text" class="form-control suggestionscontainer border-0" placeholder="Search Products, Categories, Brand" aria-label="Search" id="customSearchInput">
+                                <span class="input-group-text bg-white border-0">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
+                            </div>
+                            </div>
+                            <div class="custom-suggestion-box d-none" id="customSuggestionBox">
+                                <div class="custom-suggestion-category" id="brandSuggestions">
+                                    <h6 class="text-muted">Brands</h6>
+                                    <ul class="list-unstyled mb-2"></ul>
+                                </div>
+                                <div class="custom-suggestion-category" id="productSuggestions">
+                                    <h6 class="text-muted">Products</h6>
+                                    <ul class="list-unstyled"></ul>
+                                </div>
+                            </div>                              
+
+                        </li>
+                        <li class="nav-item position-relative d-none" id="searchInputContainer">
+                            <div class="input-group group-input">
+                                <span class="input-group-text">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Search input" aria-label="Search">
+                            </div>
+                        </li>
+                        <li class="nav-item width-221">
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-text" href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link nav-text" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                <i class="fa-regular fa-user"></i> Login
+                              </a>                            
+                             
+                            <!-- <a class="nav-link dropdown-toggle nav-text" href="#" id="navbarDropdownMenuLink"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-regular fa-user"></i> Login
+                            </a>
+
+                            <ul class="dropdown-menu common_dropmenu login_dropdown"
+                                aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="login_heading">Login to your Account</div>
+                                            <div
+                                                class="input-group mt-3 mb-3 border rounded  align-items-center justify-content-between">
+                                                <div class="input-group-prepend">
+                                                    <span class="border-0" id="basic-addon1"> <i
+                                                            class="fa-regular fa-user"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control border-0 pl-0"
+                                                    placeholder="Username" aria-label="Username"
+                                                    aria-describedby="basic-addon1">
+                                            </div>
+                                            <div
+                                                class="input-group mb-3 border rounded align-items-center justify-content-between">
+                                                <div class="input-group-prepend border-0">
+                                                    <span><i class="fa-solid fa-lock"></i></span>
+                                                </div>
+                                                <input type="password" class="form-control border-0 pl-0"
+                                                    placeholder="Password" aria-label="Password" id="passwordInput">
+                                                <div class="input-group-append">
+                                                    <span id="togglePassword" style="cursor: pointer;">
+                                                        <i class="fa-regular fa-eye"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <button type="button"
+                                                class="btn text-white btn-lg primary-bg loginbtn">Login to
+                                                continue</button>
+                                            <div class="or">or</div>
+
+                                            <div class="row d-flex justify-content-center align-items-center">
+                                                <div class="col-auto column-flex">
+                                                    <div class="socialmediaimagecontainer">
+                                                        <img src="img/google.png" class="socialimg" />
+                                                    </div>
+                                                    <div class="socialtext"> Google</div>
+                                                </div>
+                                                <div class="col-auto column-flex">
+                                                    <div class="socialmediaimagecontainer">
+                                                        <img src="img/facebook.png" class="socialimg" />
+                                                    </div>
+                                                    <div class="socialtext">Facebook</div>
+                                                </div>
+                                                <div class="col-auto column-flex ">
+                                                    <div class="socialmediaimagecontainer">
+                                                        <img src="img/guest.png" class="socialimg" />
+                                                    </div>
+                                                    <div class="socialtext"> Guest</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-center registration mt-3 mb-3">
+                                                Don’t have an account ? <a class="col-primary"> Register Now </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--small navigation bar-->
+        <!--small navigation bar-->
+        <nav class="navbar navbar-expand-lg primary-bg sm-nav-height cate_navbar" id="small-nav">
+            <div class="container">
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button> -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav1">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown position-inheritnav-item ml-100 mr-40">
+                            <a class="nav-link dropdown-text" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="modal" data-bs-target="#categoriesModal">
+                            All Categories
+                         </a>                        
+                        </li>
+                        <li class="nav-item dropdown position-inheritnav-item mr-40  ">
+                         
+                            <a class="nav-link dropdown-text" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="modal" data-bs-target="#brandModal">
+                            Brand
+                         </a>  
+                        </li>
+
+                        <li class="nav-item width-200">
+                        </li>
+                        <li class="nav-item ml-40">
+                            <a class="nav-link nav-text dropdown-text" href="#">Promos</a>
+                        </li>
+                        <li class="nav-item ml-40">
+                            <a class="nav-link nav-text dropdown-text" href="#">Offers</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--logo-->
+        <div class="position-absolute logo-center animate__animated animate__zoomIn ">
+            <img src="img/Logo.png" class="w-100" />
+        </div>
+        <!--carousal-->
+        <div class="position-relative" id="carousal-indicator">
+            <div id="carouselExampleIndicators" class="carousel slide animate__animated animate__fadeIn"
+                data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/Carousel.png" class="w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Carousel.png" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/Carousel.png" class="d-block w-100" alt="Slide 3">
+                    </div>
+                </div>
+                <div
+                    class="position-absolute carousel-text container text-center text-white animate__animated animate__fadeInUp ">
+                    You need to make
+                    <span class="primary-bg">better steps</span> instead of
+                    just making steps
+                </div>
+                <div class="container  multi-item-section animate__animated animate__fadeInUp ">
+                    <div class="d-flex justify-content-between  align-items-center">
+                        <div class="text-uppercase bestselling-title fw-bold">
+                            <span><img src="img/medal.png" /></span> Best selling
+                        </div>
+                        <a href="#" class="see_all fw-bold text-decoration-underline">
+                            View More
+                        </a>
+                    </div>
+                    <div class=" container">
+                        <div class=" mt-3">
+                            <div class="owl-carousel owl-theme owl-carousel-1">
+                                <div class="item">
+                                    <a href="product1.html" class="card-link">
+                                        <div class="card">
+                                            <div class="position-relative flex-center">
+                                                <div class="position-absolute fav-icon-launch">
+                                                    <i class="fa-regular fa-heart col-primary"></i>
+                                                </div>
+                                                <img src="img/product.png" class="card-img" alt="Card Image 1">
+                                            </div>
+                                            <div class="container">
+                                                <div class="launch-product-name">L'Eau Pour Femme 100ml Eau de Toilette
+                                                    Spray</div>
+                                                <div
+                                                    class="d-flex flex-column flex-lg-row justify-content-between mb-3 align-items-md-center">
+                                                    <div
+                                                        class="new-product-price text-center text-md-start mb-3 mb-md-1">
+                                                        <div class="carousel-product-data">RM42.50</div>
+                                                        <span
+                                                            class="text-decoration-line-through">₹11,580</span>&nbsp;&nbsp;<span
+                                                            class="discount">-50%</span>
+                                                    </div>
+                                                    <button type="button" class="btn text-white morecat w-md-auto">shop
+                                                        now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="product1.html" class="card-link">
+                                        <div class="card">
+                                            <div class="position-relative flex-center">
+                                                <div class="position-absolute fav-icon-launch">
+                                                    <i class="fa-regular fa-heart col-primary"></i>
+                                                </div>
+                                                <img src="img/product.png" class="card-img" alt="Card Image 1">
+                                            </div>
+                                            <div class="container">
+                                                <div class="launch-product-name">L'Eau Pour Femme 100ml Eau de Toilette
+                                                    Spray</div>
+                                                <div
+                                                    class="d-flex flex-column flex-lg-row justify-content-between mb-3 align-items-md-center">
+                                                    <div
+                                                        class="new-product-price text-center text-md-start mb-3 mb-md-1">
+                                                        <div class="carousel-product-data">RM42.50</div>
+                                                        <span
+                                                            class="text-decoration-line-through">₹11,580</span>&nbsp;&nbsp;<span
+                                                            class="discount">-50%</span>
+                                                    </div>
+                                                    <button type="button" class="btn text-white morecat w-md-auto">shop
+                                                        now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="product1.html" class="card-link">
+                                        <div class="card">
+                                            <div class="position-relative flex-center">
+                                                <div class="position-absolute fav-icon-launch">
+                                                    <i class="fa-regular fa-heart col-primary"></i>
+                                                </div>
+                                                <img src="img/product.png" class="card-img" alt="Card Image 1">
+                                            </div>
+                                            <div class="container">
+                                                <div class="launch-product-name">L'Eau Pour Femme 100ml Eau de Toilette
+                                                    Spray</div>
+                                                <div
+                                                    class="d-flex flex-column flex-lg-row justify-content-between mb-3 align-items-md-center">
+                                                    <div
+                                                        class="new-product-price text-center text-md-start mb-3 mb-md-1">
+                                                        <div class="carousel-product-data">RM42.50</div>
+                                                        <span
+                                                            class="text-decoration-line-through">₹11,580</span>&nbsp;&nbsp;<span
+                                                            class="discount">-50%</span>
+                                                    </div>
+                                                    <button type="button" class="btn text-white morecat w-md-auto">shop
+                                                        now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="product1.html" class="card-link">
+                                        <div class="card">
+                                            <div class="position-relative flex-center">
+                                                <div class="position-absolute fav-icon-launch">
+                                                    <i class="fa-regular fa-heart col-primary"></i>
+                                                </div>
+                                                <img src="img/product.png" class="card-img" alt="Card Image 1">
+                                            </div>
+                                            <div class="container">
+                                                <div class="launch-product-name">L'Eau Pour Femme 100ml Eau de Toilette
+                                                    Spray</div>
+                                                <div
+                                                    class="d-flex flex-column flex-lg-row justify-content-between mb-3 align-items-md-center">
+                                                    <div
+                                                        class="new-product-price text-center text-md-start mb-3 mb-md-1">
+                                                        <div class="carousel-product-data">RM42.50</div>
+                                                        <span
+                                                            class="text-decoration-line-through">₹11,580</span>&nbsp;&nbsp;<span
+                                                            class="discount">-50%</span>
+                                                    </div>
+                                                    <button type="button" class="btn text-white morecat w-md-auto">shop
+                                                        now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="product1.html" class="card-link">
+                                        <div class="card">
+                                            <div class="position-relative flex-center">
+                                                <div class="position-absolute fav-icon-launch">
+                                                    <i class="fa-regular fa-heart col-primary"></i>
+                                                </div>
+                                                <img src="img/product.png" class="card-img" alt="Card Image 1">
+                                            </div>
+                                            <div class="container">
+                                                <div class="launch-product-name">L'Eau Pour Femme 100ml Eau de Toilette
+                                                    Spray</div>
+                                                <div
+                                                    class="d-flex flex-column flex-lg-row justify-content-between mb-3 align-items-md-center">
+                                                    <div
+                                                        class="new-product-price text-center text-md-start mb-3 mb-md-1">
+                                                        <div class="carousel-product-data">RM42.50</div>
+                                                        <span
+                                                            class="text-decoration-line-through">₹11,580</span>&nbsp;&nbsp;<span
+                                                            class="discount">-50%</span>
+                                                    </div>
+                                                    <button type="button" class="btn text-white morecat w-md-auto">shop
+                                                        now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="product1.html" class="card-link">
+                                        <div class="card">
+                                            <div class="position-relative flex-center">
+                                                <div class="position-absolute fav-icon-launch">
+                                                    <i class="fa-regular fa-heart col-primary"></i>
+                                                </div>
+                                                <img src="img/product.png" class="card-img" alt="Card Image 1">
+                                            </div>
+                                            <div class="container">
+                                                <div class="launch-product-name">L'Eau Pour Femme 100ml Eau de Toilette
+                                                    Spray</div>
+                                                <div
+                                                    class="d-flex flex-column flex-lg-row justify-content-between mb-3 align-items-md-center">
+                                                    <div
+                                                        class="new-product-price text-center text-md-start mb-3 mb-md-1">
+                                                        <div class="carousel-product-data">RM42.50</div>
+                                                        <span
+                                                            class="text-decoration-line-through">₹11,580</span>&nbsp;&nbsp;<span
+                                                            class="discount">-50%</span>
+                                                    </div>
+                                                    <button type="button" class="btn text-white morecat w-md-auto">shop
+                                                        now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--New Launches-->
+    <div class="bg_img">
+        <p class=" testimonal-heading text-center text-decoration-underline text-decor-color mt-250">
+            New Launches
+        </p>
+        <div class="mt-5 container mtr-5">
+            <div class="row">
+                <div class="col-auto">
+
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="maxheightlaunch ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="  col-md-6 mb-4">
+                                    <a href="product1.html" class="card-link">
+                                        <div class="card launch-card-height">
+                                            <div class="p-3 img-container d-flex justify-content-center">
+                                                <img src="img/product1.png" class="img-product-new" alt="Card Image 1">
+                                            </div>
+                                            <div class="container">
+                                                <p class="launch-product-name">L'Eau Pour Femme 100ml Eau de
+                                                    Toilette Spray</p>
+                                                <div class="row mb-3">
+                                                    <div class="col new-product-price">RM416.00
+                                                        &nbsp;&nbsp;<span class="discount">-50%</span></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="  col-md-6 mb-4">
+                                    <a href="product1.html" class="card-link">
+                                        <div class="card launch-card-height">
+                                            <div class="p-3 img-container d-flex justify-content-center">
+                                                <img src="img/product1.png" class="img-product-new" alt="Card Image 1">
+                                            </div>
+                                            <div class="container">
+                                                <p class="launch-product-name">L'Eau Pour Femme 100ml Eau de
+                                                    Toilette Spray</p>
+                                                <div class="row mb-3">
+                                                    <div class="col new-product-price">RM416.00
+                                                        &nbsp;&nbsp;<span class="discount">-50%</span></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="  col-md-6 mb-4">
+                                    <a href="product1.html" class="card-link">
+                                        <div class="card launch-card-height">
+                                            <div class="p-3 img-container d-flex justify-content-center">
+                                                <img src="img/product1.png" class="img-product-new" alt="Card Image 1">
+                                            </div>
+                                            <div class="container">
+                                                <p class="launch-product-name">L'Eau Pour Femme 100ml Eau de
+                                                    Toilette Spray</p>
+                                                <div class="row mb-3">
+                                                    <div class="col new-product-price">RM416.00
+                                                        &nbsp;&nbsp;<span class="discount">-50%</span></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="  col-md-6 mb-4">
+                                    <a href="product1.html" class="card-link">
+                                        <div class="card launch-card-height">
+                                            <div class="p-3 img-container d-flex justify-content-center">
+                                                <img src="img/product1.png" class="img-product-new" alt="Card Image 1">
+                                            </div>
+                                            <div class="container">
+                                                <p class="launch-product-name">L'Eau Pour Femme 100ml Eau de
+                                                    Toilette Spray</p>
+                                                <div class="row mb-3">
+                                                    <div class="col new-product-price">RM416.00
+                                                        &nbsp;&nbsp;<span class="discount">-50%</span></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="img/banner1.png" class="img100 mb-4" />
+                            <img src="img/banner2.png" class="img100 " />
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-self-center mt-4 mb-4">
+                <button type="button" class="btn text-white morecat minwidth-166">
+                    Load More
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Product-->
+    <div class="container">
+        <div>
+            <div class="d-flex justify-content-between mb-3">
+                <div class="text-uppercase product-title">
+                    liquors
+                </div>
+                <a href="#" class="see_all ">
+                    see all <i class="fas fa-long-arrow-right "></i>
+                </a>
+            </div>
+            <div class="owl-carousel owl-theme owl-carousel-2 ">
+                <div class="item">
+                    <a href="product1.html" class="card-link">
+                        <div class="card">
+                            <div class="position-relative">
+                                <div class="position-absolute fav-icon fav-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <img src="img/product.png" class="card-img-top" alt="Card Image 1">
+                                <div class="badge badge-txt">
+                                    New Arrival
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="product-name">Milka Wholenut Mini Pouch</p>
+                                <div class="row">
+                                    <div class="col product-price">RM416.00</div>
+                                    <div class="col product-offer">RM516.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="product1.html" class="card-link">
+                        <div class="card">
+                            <div class="position-relative">
+                                <div class="position-absolute fav-icon fav-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <img src="img/product.png" class="card-img-top" alt="Card Image 1">
+                                <div class="badge badge-txt">
+                                    New Arrival
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="product-name">Milka Wholenut Mini Pouch</p>
+                                <div class="row">
+                                    <div class="col product-price">RM416.00</div>
+                                    <div class="col product-offer">RM516.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="product1.html" class="card-link">
+                        <div class="card">
+                            <div class="position-relative">
+                                <div class="position-absolute fav-icon fav-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <img src="img/product.png" class="card-img-top" alt="Card Image 1">
+                                <div class="badge badge-txt">
+                                    New Arrival
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="product-name">Milka Wholenut Mini Pouch</p>
+                                <div class="row">
+                                    <div class="col product-price">RM416.00</div>
+                                    <div class="col product-offer">RM516.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="product1.html" class="card-link">
+                        <div class="card">
+                            <div class="position-relative">
+                                <div class="position-absolute fav-icon fav-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <img src="img/product.png" class="card-img-top" alt="Card Image 1">
+                                <div class="badge badge-txt">
+                                    New Arrival
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="product-name">Milka Wholenut Mini Pouch</p>
+                                <div class="row">
+                                    <div class="col product-price">RM416.00</div>
+                                    <div class="col product-offer">RM516.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="product1.html" class="card-link">
+                        <div class="card">
+                            <div class="position-relative">
+                                <div class="position-absolute fav-icon fav-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <img src="img/product.png" class="card-img-top" alt="Card Image 1">
+                                <div class="badge badge-txt">
+                                    New Arrival
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="product-name">Milka Wholenut Mini Pouch</p>
+                                <div class="row">
+                                    <div class="col product-price">RM416.00</div>
+                                    <div class="col product-offer">RM516.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="pad-top-40 ">
+            <div class="d-flex justify-content-between mb-2">
+                <div class="text-uppercase product-title">
+                    Chocolates
+                </div>
+                <a href="#" class="see_all ">
+                    see all <i class="fas fa-long-arrow-right "></i>
+                </a>
+            </div>
+            <div class="owl-carousel owl-theme owl-carousel-2 ">
+                <div class="item">
+                    <a href="product1.html" class="card-link">
+                        <div class="card">
+                            <div class="position-relative">
+                                <div class="position-absolute fav-icon fav-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <img src="img/product.png" class="card-img-top" alt="Card Image 1">
+                                <div class="badge badge-txt">
+                                    New Arrival
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="product-name">Milka Wholenut Mini Pouch</p>
+                                <div class="row">
+                                    <div class="col product-price">RM416.00</div>
+                                    <div class="col product-offer">RM516.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="product1.html" class="card-link">
+                        <div class="card">
+                            <div class="position-relative">
+                                <div class="position-absolute fav-icon fav-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <img src="img/product.png" class="card-img-top" alt="Card Image 1">
+                                <div class="badge badge-txt">
+                                    New Arrival
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="product-name">Milka Wholenut Mini Pouch</p>
+                                <div class="row">
+                                    <div class="col product-price">RM416.00</div>
+                                    <div class="col product-offer">RM516.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="product1.html" class="card-link">
+                        <div class="card">
+                            <div class="position-relative">
+                                <div class="position-absolute fav-icon fav-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <img src="img/product.png" class="card-img-top" alt="Card Image 1">
+                                <div class="badge badge-txt">
+                                    New Arrival
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="product-name">Milka Wholenut Mini Pouch</p>
+                                <div class="row">
+                                    <div class="col product-price">RM416.00</div>
+                                    <div class="col product-offer">RM516.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="product1.html" class="card-link">
+                        <div class="card">
+                            <div class="position-relative">
+                                <div class="position-absolute fav-icon fav-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <img src="img/product.png" class="card-img-top" alt="Card Image 1">
+                                <div class="badge badge-txt">
+                                    New Arrival
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="product-name">Milka Wholenut Mini Pouch</p>
+                                <div class="row">
+                                    <div class="col product-price">RM416.00</div>
+                                    <div class="col product-offer">RM516.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="product1.html" class="card-link">
+                        <div class="card">
+                            <div class="position-relative">
+                                <div class="position-absolute fav-icon fav-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <img src="img/product.png" class="card-img-top" alt="Card Image 1">
+                                <div class="badge badge-txt">
+                                    New Arrival
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="product-name">Milka Wholenut Mini Pouch</p>
+                                <div class="row">
+                                    <div class="col product-price">RM416.00</div>
+                                    <div class="col product-offer">RM516.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container bg_img">
+        <p class="testimonal-heading text-center mt-4">
+            Better Living Through Step
+        </p>
+        <div class="d-flex justify-content-center">
+            <div class="maxheightlaunch">
+                <img src="img/banner.png" class="rounded" width="100%" height="100%" />
+            </div>
+        </div>
+        <div class="pad-top-40 ">
+            <div class="d-flex justify-content-between mb-4">
+                <div class="text-uppercase product-title">
+                    Perfumes
+                </div>
+                <a href="#" class="see_all ">
+                    see all <i class="fas fa-long-arrow-right "></i>
+                </a>
+            </div>
+            <div class="owl-carousel owl-theme owl-carousel-2 ">
+                <div class="item">
+                    <a href="product1.html" class="card-link">
+                        <div class="card">
+                            <div class="position-relative">
+                                <div class="position-absolute fav-icon fav-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <img src="img/product.png" class="card-img-top" alt="Card Image 1">
+                                <div class="badge badge-txt">
+                                    New Arrival
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="product-name">Milka Wholenut Mini Pouch</p>
+                                <div class="row">
+                                    <div class="col product-price">RM416.00</div>
+                                    <div class="col product-offer">RM516.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="product1.html" class="card-link">
+                        <div class="card">
+                            <div class="position-relative">
+                                <div class="position-absolute fav-icon fav-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <img src="img/product.png" class="card-img-top" alt="Card Image 1">
+                                <div class="badge badge-txt">
+                                    New Arrival
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="product-name">Milka Wholenut Mini Pouch</p>
+                                <div class="row">
+                                    <div class="col product-price">RM416.00</div>
+                                    <div class="col product-offer">RM516.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="product1.html" class="card-link">
+                        <div class="card">
+                            <div class="position-relative">
+                                <div class="position-absolute fav-icon fav-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <img src="img/product.png" class="card-img-top" alt="Card Image 1">
+                                <div class="badge badge-txt">
+                                    New Arrival
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="product-name">Milka Wholenut Mini Pouch</p>
+                                <div class="row">
+                                    <div class="col product-price">RM416.00</div>
+                                    <div class="col product-offer">RM516.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="product1.html" class="card-link">
+                        <div class="card">
+                            <div class="position-relative">
+                                <div class="position-absolute fav-icon fav-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <img src="img/product.png" class="card-img-top" alt="Card Image 1">
+                                <div class="badge badge-txt">
+                                    New Arrival
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="product-name">Milka Wholenut Mini Pouch</p>
+                                <div class="row">
+                                    <div class="col product-price">RM416.00</div>
+                                    <div class="col product-offer">RM516.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="product1.html" class="card-link">
+                        <div class="card">
+                            <div class="position-relative">
+                                <div class="position-absolute fav-icon fav-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <img src="img/product.png" class="card-img-top" alt="Card Image 1">
+                                <div class="badge badge-txt">
+                                    New Arrival
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="product-name">Milka Wholenut Mini Pouch</p>
+                                <div class="row">
+                                    <div class="col product-price">RM416.00</div>
+                                    <div class="col product-offer">RM516.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-self-center mt-4 mb-4">
+                <button type="button" class="btn text-white morecat minwidth-166 ">
+                    More Categories
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Testimonal -->
+    <div class="testimonal-bg pad-top-18 pad-large">
+        <div class="container">
+            <p class="testimonal-heading text-center">
+                Our Testimonials
+            </p>
+            <div class="owl-carousel owl-theme owl-carousel-3">
+                <div class="testimonial-item">
+                    <div class="img-overview">
+                        <img src="img/avatar.png" class="img-avatar" alt="Avatar">
+                    </div>
+                    <div class="star-rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <h5 class="testimonal-name">Olivia Marshall</h5>
+                    <p class="testimonaldescription">"Facilisi magna elementum tempus orci eu lobortis elementum nibh.
+                        Quis risus sed vulputate odio ut."</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="img-overview">
+                        <img src="img/avatar.png" class="img-avatar" alt="Avatar">
+                    </div>
+                    <div class="star-rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <h5 class="testimonal-name">Lola Fisher</h5>
+                    <p class="testimonaldescription">"Facilisi magna elementum tempus orci eu lobortis elementum nibh.
+                        Quis risus sed vulputate odio ut."</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="img-overview">
+                        <img src="img/avatar.png" class="img-avatar" alt="Avatar">
+                    </div>
+                    <div class="star-rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <h5 class="testimonal-name">Aisha Walker</h5>
+                    <p class="testimonaldescription">"Facilisi magna elementum tempus orci eu lobortis elementum nibh.
+                        Quis risus sed vulputate odio ut."</p>
+                </div>
+            </div>
+
+            <!-- <div class="row flex-center">
+                <div class="col-md-4">
+                    <img src="img/avatar.png" class="mx-auto d-block" alt="Avatar" />
+                </div>
+                <div class="col-md-4">
+                    <img src="img/avatar.png" class="mx-auto d-block" alt="Avatar" width="141px" height="141px" />
+                </div>
+                <div class="col-md-4">
+                    <img src="img/avatar.png" class="mx-auto d-block" alt="Avatar" width="87px" height="87px" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="star-container">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <p>Olivia Marshall</p>
+                    <div>“Facilisis magna etiam tempor orci eu lobortis elementum nibh. Quis
+                        risus sed vulputate odio
+                        ut.”</div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="star-container">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <p>Olivia Marshall</p>
+                    <div>“Facilisis magna etiam tempor orci eu lobortis elementum nibh. Quis
+                        risus sed vulputate odio
+                        ut.”</div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="star-container">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <p>Olivia Marshall</p>
+                    <div>“Facilisis magna etiam tempor orci eu lobortis elementum nibh. Quis
+                        risus sed vulputate odio
+                        ut.”</div>
+                </div>
+
+            </div> -->
+        </div>
+
+    </div>
+    <!-- Application download section -->
+    <div class="primary-bg  pad-top-40 backgroundImag">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 ">
+                    <p class="text-white product-heading">Start your day with Products</p>
+                    <p class="product-description text-white">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley
+                        of type and scrambled it.
+                    </p>
+                    <a href="https://play.google.com/store" target="_blank">
+                        <img src="img/androidicons.png" alt="Google Play Store Icon" />
+                    </a>
+                    <a href="https://www.apple.com/app-store/" target="_blank">
+                        <img src="img/iosicon.png" alt="Apple App Store Icon" />
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-6 d-flex justify-content-center">
+                    <img src="img/backgrondimg1.png" class="img-w-100" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="bg-brown">
+        <div class="container pad-top-30 pad-bottom-40">
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                    <img src="img/Logo.png" alt="Plus Max Logo" />
+                    <div class="description">Level 16, Menaka Safuan No, 80, Jalan Ambang 50450
+                        Kuala Lampur Malaviya
+                    </div>
+                    <div class="email-contact-container">
+                        <div class="email-contact">Info@plusmax.com</div>
+                        <div class="email-contact">+60 123456789</div>
+                    </div>
+                    <div class="social-media-icons">
+                        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <div class="newsletter-content">
+                        Sign up to our newsletter and we’ll keep you up to date with the latest
+                        arrivals
+                    </div>
+                    <div class="input-group">
+                        <input type="email" class="form-control border-0 border-bottom email-subscripe bg-trans"
+                            id="emailInput" placeholder="Enter your email" required>
+                        <button class="btn border-bottom" type="submit">
+                            <img src="img/Arrow.png" />
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <p class="text-decoration-underline footer-heading">Categories</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0 li-group">
+                            <a href="link-to-liquors" class="category-link">Liquors</a>
+                        </li>
+                        <li class="list-group-item border-0 li-group">
+                            <a href="link-to-cigarettes" class="category-link">Cigarettes</a>
+                        </li>
+                        <li class="list-group-item border-0 li-group">
+                            <a href="link-to-perfumes" class="category-link">Perfumes</a>
+                        </li>
+                        <li class="list-group-item border-0 li-group">
+                            <a href="link-to-chocolates" class="category-link">Chocolates</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <p class="text-decoration-underline footer-heading">Categories</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0 li-group">
+                            <a href="link-to-liquors" class="category-link">Liquors</a>
+                        </li>
+                        <li class="list-group-item border-0 li-group">
+                            <a href="link-to-cigarettes" class="category-link">Cigarettes</a>
+                        </li>
+                        <li class="list-group-item border-0 li-group">
+                            <a href="link-to-perfumes" class="category-link">Perfumes</a>
+                        </li>
+                        <li class="list-group-item border-0 li-group">
+                            <a href="link-to-chocolates" class="category-link">Chocolates</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <p class="text-decoration-underline footer-heading">Categories</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0 li-group">
+                            <a href="link-to-liquors" class="category-link">Liquors</a>
+                        </li>
+                        <li class="list-group-item border-0 li-group">
+                            <a href="link-to-cigarettes" class="category-link">Cigarettes</a>
+                        </li>
+                        <li class="list-group-item border-0 li-group">
+                            <a href="link-to-perfumes" class="category-link">Perfumes</a>
+                        </li>
+                        <li class="list-group-item border-0 li-group">
+                            <a href="link-to-chocolates" class="category-link">Chocolates</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--footer tab-->
+    <div class="bg-black p-3 text-center pattern-logo">
+        © 2024 plusmax. All right reserved
+    </div>
+
+    <!-- inital  Modal -->
+    <div class="modal modalOverlay modal-begin fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="close-btn" id="customCloseButton">
+                    <img src="img/close.png" />
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-sm-12  pt-4 pb-4 modal-bg-img">
+                        <div class="container">
+                            <div class="modal_heading">
+                                Welcome to
+                                Plusmax
+                            </div>
+                            <div class="modal_description mt-2">
+                                Let’s get you all set up so you can verify your personal account and begin setting up
+                                your profile
+                            </div>
+                            <div class="mt-4 mb-4">
+                                <img src="img/modal-img.png" class="w-100" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12  center_content">
+                        <div class="container">
+                            <div class="select-terminal">
+                                Select Terminal
+                            </div>
+                            <div class="row g-2 mt-2 mb-2">
+                                <div class="col-sm-6">
+                                    <button type="button" id="arrivalBtn" class="btn btn-lg arrive-btn">Arrival</button>
+                                </div>
+                                <div class="col-sm-6">
+                                    <button type="button" id="departureBtn"
+                                        class="btn btn-lg arrive-btn toggle-inactive">Departure</button>
+                                </div>
+                            </div>
+                            <div class="container mt-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <select class="form-select select-name">
+                                            <option selected>Airport</option>
+                                            <option value="1">Seaport</option>
+                                            <option value="2">Land border</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mt-3 mb-3 position-relative">
+                                    <div class="">
+
+                                    </div>
+                                    <div class="border autosuggesstionContainer">
+                                        <span class="plane_icon">
+                                            <img src="img/plane.png" alt="Plane Icon" />
+                                        </span>
+                                        <input type="text" id="autoSuggestInput" class="form-control border-0 pl-1"
+                                            placeholder="Kuala Lumpur International Airport...">
+                                        <span id="clearButton" class="clear-btn">&times;</span>
+
+                                    </div>
+                                    <div id="suggestions" class="suggestions-list"></div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <button type="button" class="btn custom-btn mb-3" id="submitButton">
+                                            Submit <span class="submit-arrow">&gt;</i></span>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- next Modal -->
+    <div class="modal modalOverlay modal-begin fade" id="secondModal" tabindex="-1" aria-labelledby="secondModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-1">
+
+            <div class="modal-content">
+                <div class="close-btn" id="instructionclosebtn">
+                    <img src="img/close.png" />
+                </div>
+                <div class="container">
+
+                    <div class="modal-header border-0">
+                        <h5 class="instruction-modal-title col-primary" id="secondModalLabel">DUTY FREE PURCHASE GUIDE
+                            (ARRIVAL)</h5>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="modal-body instructionbg instructioncontent" id="content-container">
+                    </div>
+                </div>
+
+                <div class="insturctionfootercolor">
+                    <div class="container mt-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="checkbox1">
+                            <label class="form-check-label checkboxlabel" for="checkbox1">
+                                I have read and understood the Malaysia Duty Free Customs Allowance </label>
+                        </div>
+                        <div class="row mt-3 mb-3 d-flex justify-content-center ">
+                            <div class="col-auto ">
+                                <button type="button" class="btn custom-btn instuctionbtn" id="submitinstructionButton">
+                                    Submit <span class="submit-arrow">&gt;</i></span>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Login Modal-->
+    <div class="modal fade login-modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog login-dialog">
+          <div class="modal-content login-content">
+                  <!-- Polygon Shape -->
+      <div class="polygon-top"></div>
+
+            <div class="modal-body">
+                
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="login_heading mb-32">Login to your Account</div>
+                        
+                        <div
+                            class="input-group mb-32 w-75 border rounded  align-items-center justify-content-between">
+                            <div class="input-group-prepend">
+                                <span class="border-0" id="basic-addon1"> <i
+                                        class="fa-regular fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control border-0 pl-0"
+                                placeholder="Username" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div
+                            class="input-group mb-4 w-75  border rounded align-items-center justify-content-between">
+                            <div class="input-group-prepend border-0">
+                                <span><i class="fa-solid fa-lock"></i></span>
+                            </div>
+                            <input type="password" class="form-control border-0 pl-0"
+                                placeholder="Password" aria-label="Password" id="passwordInput">
+                            <div class="input-group-append">
+                                <span id="togglePassword" style="cursor: pointer;">
+                                    <i class="fa-regular fa-eye"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <a href="#" class="forgotpassword w-75">
+                            forgot password
+                        </a>
+                        <button type="button"
+                            class="btn text-white btn-lg primary-bg loginbtn mb-4 mt-4 w-75 ">Login to
+                            continue</button>
+                        <div class="or">or</div>
+
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-auto column-flex">
+                                <div class="socialmediaimagecontainer">
+                                    <img src="img/google.png" class="socialimg" />
+                                </div>
+                                <div class="socialtext"> Google</div>
+                            </div>
+                            <div class="col-auto column-flex">
+                                <div class="socialmediaimagecontainer">
+                                    <img src="img/facebook.png" class="socialimg" />
+                                </div>
+                                <div class="socialtext">Facebook</div>
+                            </div>
+                            <div class="col-auto column-flex ">
+                                <div class="socialmediaimagecontainer">
+                                    <img src="img/guest.png" class="socialimg" />
+                                </div>
+                                <div class="socialtext"> Guest</div>
+                            </div>
+                        </div>
+
+                        <div class="text-center registration mt-3 mb-3">
+                            Don’t have an account ? <a class="col-primary"> Register Now </a>
+                        </div>
+                    </div>
+                </div>
+    </div>
+           
+          </div>
+        </div>
+      </div>
+      
+<!--Category Modal-->
+<div class="modal fade category-modal" id="categoriesModal" tabindex="-1" aria-labelledby="categoriesModalLabel" aria-hidden="true">
+    <div class="modal-dialog category-dialog">
+        <div class="modal-content category-content">
+                <!-- Polygon Shape -->
+    <div class="category-polygon-top"></div>
+
+    <div>
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 mt-4">
+                <ul class="nav flex-column side-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active side-nav" id="tab1" data-bs-toggle="tab" href="#content1" role="tab">
+                            Liquors <span class="icon">&gt;</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link side-nav" id="tab2" data-bs-toggle="tab" href="#content2" role="tab">
+                            Cigarettes <span class="icon">&gt;</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link side-nav" id="tab3" data-bs-toggle="tab" href="#content3" role="tab">
+                            Chocolates <span class="icon">&gt;</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link side-nav" id="tab4" data-bs-toggle="tab" href="#content4" role="tab">
+                            Perfumes <span class="icon">&gt;</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Tab Content -->
+            <div class="col-md-9">
+                <div class="sidemenubar rounded">
+                    <div class="container">
+                    <div class="tab-content mt-4">
+                        <div class="tab-pane fade show active" id="content1" role="tabpanel">
+                            <div class="row">
+                                <div class="col-sm-3 submenu">
+                                    <h6 class="cat-heading">WHISKY</h6>
+                                    <p>
+                                        <a href="#" class="submenu-link">American</a><br>
+                                        <a href="#" class="submenu-link">Blended</a><br>
+                                        <a href="#" class="submenu-link">Scotch</a><br>
+                                        <a href="#" class="submenu-link">Irish</a><br>
+                                        <a href="#" class="submenu-link">Single Malt</a>
+                                    </p>
+                                </div>
+                                <div class="col-sm-3 submenu">
+                                    <h6  class="cat-heading">TEQUILA</h6>
+                                    <p>
+                                        <a href="#" class="submenu-link">Tequila</a>
+                                    </p>
+                                </div>
+                                <div class="col-sm-3 submenu">
+                                    <h6  class="cat-heading">COGNAC</h6>
+                                    <p>
+                                        <a href="#" class="submenu-link">Extra</a><br>
+                                        <a href="#" class="submenu-link">Vs</a><br>
+                                        <a href="#" class="submenu-link">Vsop</a><br>
+                                        <a href="#" class="submenu-link">Xo</a>
+                                    </p>
+                                </div>
+                                <div class="col-sm-3 submenu">
+                                    <h6  class="cat-heading">SPARKLING WINE</h6>
+                                    <p>
+                                        <a href="#" class="submenu-link">Blanc</a><br>
+                                        <a href="#" class="submenu-link">Cava</a><br>
+                                        <a href="#" class="submenu-link">Ice Wine</a><br>
+                                        <a href="#" class="submenu-link">Prosecco</a><br>
+                                        <a href="#" class="submenu-link">Rose</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+    
+                        <div class="tab-pane fade" id="content2" role="tabpanel">
+                            <h6  class="cat-heading">Cigarettes Content</h6>
+                            <p>Details about different types of cigarettes go here.</p>
+                        </div>
+    
+                        <div class="tab-pane fade" id="content3" role="tabpanel">
+                            <h6  class="cat-heading">Chocolates Content</h6>
+                            <p>Details about different types of chocolates go here.</p>
+                        </div>
+    
+                        <div class="tab-pane fade" id="content4" role="tabpanel">
+                            <h6  class="cat-heading">Perfumes Content</h6>
+                            <p>Details about different types of perfumes go here.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+         
+        </div>
+      </div>
+  </div>
+  
+<!--Brand Modal-->  
+<div class="modal fade brand-modal" id="brandModal" tabindex="-1" aria-labelledby="brandModalLabel" aria-hidden="true">
+    <div class="modal-dialog brand-dialog">
+        <div class="modal-content category-content">
+                <!-- Polygon Shape -->
+    <div class="brand-polygon-top"></div>
+
+    <div>
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 mt-4">
+                <ul class="nav flex-column side-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active side-nav" id="tab1" data-bs-toggle="tab" href="#brandcontent1" role="tab">
+                            Liquors <span class="icon">&gt;</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link side-nav" id="tab2" data-bs-toggle="tab" href="#brandcontent2" role="tab">
+                            Cigarettes <span class="icon">&gt;</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link side-nav" id="tab3" data-bs-toggle="tab" href="#brandcontent3" role="tab">
+                            Chocolates <span class="icon">&gt;</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link side-nav" id="tab4" data-bs-toggle="tab" href="#brandcontent4" role="tab">
+                            Perfumes <span class="icon">&gt;</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Tab Content -->
+            <div class="col-md-9">
+                <div class="sidemenubar rounded">
+                    <div class="container">
+                    <div class="tab-content mt-4">
+                        <div class="tab-pane fade show active" id="brandcontent1" role="tabpanel">
+                            <div class="container mt-5">
+                                <div class="row">
+                                    <div class="col-6 col-md-3 mb-4">
+                                        <div class="brand-logo">
+                                            <img src="https://via.placeholder.com/150?text=Brand1" alt="Brand1" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3 mb-4">
+                                        <div class="brand-logo">
+                                            <img src="https://via.placeholder.com/150?text=Brand2" alt="Brand2" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3 mb-4">
+                                        <div class="brand-logo">
+                                            <img src="https://via.placeholder.com/150?text=Brand3" alt="Brand3" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3 mb-4">
+                                        <div class="brand-logo">
+                                            <img src="https://via.placeholder.com/150?text=Brand4" alt="Brand4" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <!-- Repeat similar blocks for more logos -->
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-md-3 mb-4">
+                                        <div class="brand-logo">
+                                            <img src="https://via.placeholder.com/150?text=Brand1" alt="Brand1" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3 mb-4">
+                                        <div class="brand-logo">
+                                            <img src="https://via.placeholder.com/150?text=Brand2" alt="Brand2" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3 mb-4">
+                                        <div class="brand-logo">
+                                            <img src="https://via.placeholder.com/150?text=Brand3" alt="Brand3" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3 mb-4">
+                                        <div class="brand-logo">
+                                            <img src="https://via.placeholder.com/150?text=Brand4" alt="Brand4" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <!-- Repeat similar blocks for more logos -->
+                                </div>
+                            </div>
+                        
+                            
+                        </div>
+    
+                        <div class="tab-pane fade" id="brandcontent2" role="tabpanel">
+                            <h6  class="cat-heading">Cigarettes Content</h6>
+                            <p>Details about different types of cigarettes go here.</p>
+                        </div>
+    
+                        <div class="tab-pane fade" id="brandcontent3" role="tabpanel">
+                            <h6  class="cat-heading">Chocolates Content</h6>
+                            <p>Details about different types of chocolates go here.</p>
+                        </div>
+    
+                        <div class="tab-pane fade" id="brandcontent4" role="tabpanel">
+                            <h6  class="cat-heading">Perfumes Content</h6>
+                            <p>Details about different types of perfumes go here.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+         
+        </div>
+      </div>
+  </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+</body>
+
+</html>
