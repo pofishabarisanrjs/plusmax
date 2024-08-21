@@ -2184,18 +2184,18 @@ text-align: left;
         top: -130px;
     }
     .category-dialog{
-        top: -240px;
-        left: 60px;
+        top: -213px;
+        left: 33%;
     }
     .category-polygon-top{
-        left: 30%;
+        left: 35%;
     }
     .brand-dialog{
-        top: -240px;
-        left: 60px;
+        top: -213px;
+        left: 42%;
     }
     .brand-polygon-top{
-        left: 38%;
+        left: 43%;
     }
   }
   @media (max-height: 960px) {
