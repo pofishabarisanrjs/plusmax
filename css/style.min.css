@@ -1176,7 +1176,7 @@ button .owl-prev {
     max-width: 500px;
     top: -13px;
     position: fixed;
-    right: 10%;
+    right: 9%;
 } 
 .category-dialog{
     max-width: 735px;
@@ -2181,7 +2181,7 @@ text-align: left;
   }
   @media (max-height: 1024px) {
     .login-dialog{
-        top: -160px;
+        top: -130px;
     }
     .category-dialog{
         top: -240px;
