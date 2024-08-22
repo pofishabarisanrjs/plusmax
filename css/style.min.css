@@ -1882,6 +1882,18 @@ button .owl-prev {
     .polygon-top {
         right: 25%;
     }
+    .category-dialog{
+        left: 33%;
+    }
+    .category-polygon-top{
+        left: 34%;
+    }
+    .brand-dialog{
+        left: 41%;
+    }
+    .brand-polygon-top{
+        left: 42%;
+    }
 }
 
 @media (max-width: 1500px) {
